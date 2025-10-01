@@ -8,8 +8,10 @@ function parseURL(url) {
     console.log("    Parsing: URLBody: " + urlbody)
     let split_header_url = urlbody.lastIndexOf("/", urlbody.search("://"))
     let real_url = urlbody.substr(split_header_url + 1)
-    if (!real_url) {
-        throw "Invalid real URL: " + urlbody
+    if (!real_url) {        
+        // 宣传原项目
+        throw "自己搭建, 有手就行 https://github.com/NyaMisty/cloudflare-workers-uniproxy"
+        // throw "Invalid real URL: " + urlbody
     }
     let headersbody = urlbody.substr(0, split_header_url)
     console.log("    Parsing: Real URL: " + real_url)
